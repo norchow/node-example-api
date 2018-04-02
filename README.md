@@ -1,4 +1,4 @@
-#Example REST API
+# Example REST API
 
 * `npm install`
 * `mongod` / `brew services start mongodb`
