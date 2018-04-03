@@ -1,6 +1,13 @@
 'use strict';
 module.exports = function(app) {
   var todoList = require('../controllers/todoListController');
+  app.route('/')
+    .get((req, res) => {
+      res.json({
+        'self': 'http://localhost:3000/',
+        'tasks': 'http://localhost:3000/tasks'
+      });
+    });
 
   app.route('/tasks')
     .get(todoList.list_all_tasks)

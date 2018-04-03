@@ -17,6 +17,10 @@ var TaskSchema = new Schema({
       enum: ['pending', 'ongoing', 'completed']
     }],
     default: ['pending']
+  },
+  links: {
+    self: String,
+    comments: String
   }
 });
 
@@ -34,6 +38,10 @@ var CommentSchema = new Schema({
   text: {
     type: String,
     required: 'Enter the text of the comment'
+  },
+  links: {
+    self: String,
+    task: String
   }
 });
 
